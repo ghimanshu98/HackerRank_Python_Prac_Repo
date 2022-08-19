@@ -1,4 +1,5 @@
 
+
 def migratoryBirds(arr_count, arr):
     # Write your code here
     dic ={}
@@ -20,7 +21,31 @@ def migratoryBirds(arr_count, arr):
         if dic.get(key) > temp:
             temp = dic.get(key)
             mf = key
-    
+        elif dic.get(key) == temp:
+            if key < mf:
+                mf = key
+    return mf
+
+def migratory_birds2(arr_count, arr):
+    dic = {}
+    for i in arr:
+        if dic.get(str(i)) == None:
+            dic[str(i)] = 1
+        else:
+            dic[str(i)] = dic.get(str(i))+1
+            # t = dic.get(str(i))
+            # dic[str(i)] = t+1
+
+    print(dic)
+    mf = None
+    temp = 0
+    for key in dic.keys():
+        if dic.get(key) > temp:
+            temp = dic.get(key)
+            mf = key
+        elif dic.get(key) == temp:
+            if key < mf:
+                mf = key
     return mf
 
 
@@ -32,14 +57,14 @@ if __name__ == '__main__':
 
     result = migratoryBirds(arr_count, arr)
 
-    print(result)
-
     # ------------------------------------------------------------------------------
-
+    # update working now.
     #  Total arr is not geting passed to function - only a length of 2048 is getting passed
 
+
+
 """
-    # "Logic is working for smaller array but ailing when below test case is passed."
+    # "Logic is working for smaller array but failing when below test case is passed."
 
     arr_size = 124992
 
