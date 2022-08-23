@@ -19,7 +19,6 @@ def fibonacci(n):
         f = l
         l = t
 
-
 fibonacci(5)
 print()
 rec_fibonacci(5)    
