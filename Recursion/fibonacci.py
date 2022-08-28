@@ -19,7 +19,17 @@ def fibonacci(n):
         f = l
         l = t
 
+# gives the nth term in fibonacci series
+def rec_fib(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    if n>1:
+        return rec_fib(n-2)+ rec_fib(n-1)
+
 fibonacci(5)
 print()
 rec_fibonacci(5)    
-
+print()
+print(rec_fib(5))
