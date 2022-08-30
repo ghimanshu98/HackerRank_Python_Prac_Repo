@@ -64,5 +64,5 @@ if __name__ == '__main__':
     a = list(map(int, input().rstrip().split()))
 
     # pickingNumbers(a)
-    pickingNumbers2(a)
-    # print(str(length) + '\n')
+    pickingNumbers(a)
+    print(str(length) + '\n')
