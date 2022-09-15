@@ -2,6 +2,7 @@ from math import sqrt
 
 
 import math
+from re import I
 
 # not optimized
 def squares2(a, b):
@@ -23,5 +24,21 @@ def squares(a, b):
 
     return count
 
-print(squares(11,724))
-    
+# Working and optimied code
+def squares3(a,b):
+    if a==1:
+        count = 1
+    else:
+        count = 0
+    i, j, jc = 1, 2, 2
+    while(i<b):
+        i = i + j + 1
+        if i >=a  and i<=b:
+            count += 1
+        j = 2*jc
+        jc += 1
+
+    return count
+
+print(squares3(1,10))
+# print(squares3(4,4))    
