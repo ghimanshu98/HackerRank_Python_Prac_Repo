@@ -1,6 +1,3 @@
-from turtle import left
-
-
 def appendAndDelete(s, t, k):
     # Write your code here
     t_len = len(t)
